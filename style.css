@@ -30,23 +30,23 @@ body {
 }
 
 .img-home {
-  background-image: url(./img/AI.jpeg);
+  background-image: url(img/AI.jpeg);
 }
 
 #img-about {
-  background-image: url(./img/Robots.jpeg);
+  background-image: url(img/Robots.jpeg);
 }
 
 #img-faculty {
-  background-image: url(./img/blockchain.jpeg);
+  background-image: url(img/blockchain.jpeg);
 }
 
 #img-itinerary {
-  background-image: url(./img/VR.jpeg);
+  background-image: url(img/VR.jpeg);
 }
 
 #img-contact {
-  background-image: url(./img/cyber.jpeg);
+  background-image: url(img/cyber.jpeg);
 }
 
 .-hidden {
