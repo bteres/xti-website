@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#home"><img src="img/logo.png" height="40" alt="xTech.Institute"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faculty">Faculty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#itinerary">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="panel">
+      <video autoplay muted loop id="myVideo">
+        <source src="/img/XTI.mp4" type="video/mp4">
+      </video>
+      <!-- <div class="image-bg img-home"></div> -->
+      <div class="image-bg -hidden" id="img-about"></div>
+      <div class="image-bg -hidden" id="img-faculty"></div>
+      <div class="image-bg -hidden" id="img-itinerary"></div>
+      <div class="image-bg -hidden" id="img-contact"></div>
+    </div>
+    <div id="box1" class="container-fluid">
+
+      <!-- <div class="row" style="height: 100vh; overflow-y: scroll; position: relative;" data-spy="scroll" data-target="#navbar" data-offset="-65"> -->
+      <div class="row justify-content-center content-row">
+        <div class="content col-md-6 col-lg-4" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum repudiandae ab modi harum officiis, numquam ad velit excepturi, sapiente ipsum dolorum quam animi qui nemo laudantium, maxime mollitia, a maiores.</div>
+        <div class="w-100"></div>
+        <div class="content col-md-6 col-lg-4" id="about">Quos eligendi hic, officiis exercitationem quibusdam iure cum neque repellat assumenda, culpa velit eos facilis minima est tempore eveniet tempora nisi dicta voluptatum! Eligendi a fuga ab nam cum velit.</div>
+        <div class="w-100"></div>
+        <div class="content col-md-6 col-lg-4" id="faculty">Fugiat debitis, suscipit maiores saepe sunt officiis id. Necessitatibus repellendus consequatur facilis quidem cum quas dolorum temporibus harum voluptatem nemo architecto, ipsa placeat commodi debitis, illum, dignissimos ipsam. Veritatis, illum!
+        <br/>
+        <button id="toggle" class="btn btn-primary">Meet the Faculty</button>
+        </div>
+        <div class="w-100"></div>
+        <div class="content col-md-6 col-lg-4" id="itinerary">Ullam, blanditiis perspiciatis voluptas tenetur ipsa placeat nesciunt consectetur alias laudantium amet autem consequatur, iste natus quasi. Pariatur optio quam nisi cumque, officiis iste. Provident ut error libero reiciendis maiores.</div>
+        <div class="w-100"></div>
+        <div class="content col-md-6 col-lg-4 last" id="contact">Vitae libero quia doloremque molestias expedita. Quam eveniet, nobis minus? Atque repellat voluptatibus impedit veniam adipisci? Inventore omnis distinctio architecto quibusdam tenetur eaque, dolorum iusto ea laudantium consequuntur dolor doloribus.</div>
+      </div>
+
+    </div>
+
+    <div id="box2" class="container-fluid">
+      <div class="row justify-content-center content-row">
+        <div class="content col-md-6 col-lg-4">FACULTY!!!
+          <br/>
+          <button id="back" class="btn btn-primary">Back</button></div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $.fn.isInViewport = function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).on('resize scroll', function() {
+      $('.content').each(function() {
+        if($('#box2').is(":visible")) {
+          $('.nav-link[href="#faculty"]').addClass('active');
+          // break;
+          return;
+        }
+        var image = $(this).attr('id');
+        if ($('#home').isInViewport() && !$('#about').isInViewport()) {
+          $('.image-bg').addClass('-hidden');
+          $('#myVideo').removeClass('-hidden');
+          $('.nav-link').removeClass('active');
+          $('.nav-link[href="#home"]').addClass('active');
+        } else if ($('#home').isInViewport() && $('#about').isInViewport()) {
+          $('#myVideo').addClass('-hidden');
+          $('.image-bg').addClass('-hidden');
+          $('#img-about').removeClass('-hidden');
+          $('.nav-link').removeClass('active');
+          $('.nav-link[href="#about"]').addClass('active');
+        } else if ($(this).isInViewport()) {
+          $('#myVideo').addClass('-hidden');
+          $('.image-bg').addClass('-hidden');
+          $('#img-' + image).removeClass('-hidden');
+          $('.nav-link').removeClass('active');
+          $('.nav-link[href="#' + image + '"]').addClass('active');
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      $('#box2').hide();
+      $("#toggle,#back").click(function () {
+        $('#box1,#box2,.panel').toggle();
+      });
+    });
+    </script>
+  </body>
+</html>
